@@ -10,7 +10,7 @@
 
 #include <cstdint>
 
-namespace ccm::helpers
+namespace ccm::support
 {
 	enum class endian : std::uint16_t
 	{
@@ -26,6 +26,6 @@ namespace ccm::helpers
 		native = __BYTE_ORDER__
 #endif
 	};
-} // namespace ccm::helpers
+} // namespace ccm::support
 
 

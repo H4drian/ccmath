@@ -34,7 +34,7 @@
 	#  define CCMATH_HAS_BUILTIN_IS_CONSTANT_EVALUATED
 #endif
 
-namespace ccm::traits
+namespace ccm::support
 {
 	inline constexpr bool is_constant_evaluated() noexcept
 	{
@@ -46,7 +46,7 @@ namespace ccm::traits
         return false;
 #endif
 	}
-} // namespace ccm::type_traits
+} // namespace ccm::support
 
 
 // Undefine the helper macros to clean up the macro namespace
