@@ -87,8 +87,8 @@ namespace ccm
 		// Check for the sign of +0.0 and -0.0 with __builtin_bit_cast
 		if (x == static_cast<T>(0) || ccm::isnan(x))
 		{
-			const auto bits = __builtin_bit_cast(helpers::float_bits_t<T>, x);
-			return (bits & helpers::sign_mask_v<T>) != 0;
+			const auto bits = __builtin_bit_cast(support::float_bits_t<T>, x);
+			return (bits & support::sign_mask_v<T>) != 0;
 		}
 
 		return x < static_cast<T>(0);
