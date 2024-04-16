@@ -40,8 +40,11 @@ namespace ccm
             if constexpr (num_floored != num) { return num_floored + 1; } 
 		}
 
-        // if num is an integer, num is returned, unmodified
+        // If num is an integer, num is returned, unmodified.
         if constexpr (std::is_integral_v<T>) { return num; }
+
+		// If num is not an integer or floating-point value, NaN is returned.
+		return std::numeric_limits<T>::quiet_NaN();
     }
 
     /**
